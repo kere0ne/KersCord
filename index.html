@@ -70,7 +70,11 @@
   <div class="opt" style="border-color:var(--green)">
     <h3>Direct install <span class="tag2 free">delta-style, no computer needed</span></h3>
     <p>Tap-to-install straight from this page using Apple's OTA install. It goes live the moment a signed IPA sits at the URL inside <code>manifest.plist</code>. Until then the button errors out, because there is no signed IPA yet: making one needs a decrypted Discord IPA and an Apple signing certificate ($99/yr, and Apple revokes certs regularly, so delta.bz dies for days at a time too).</p>
-    <a class="cta2" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fkere0ne.github.io%2FKersCord%2Fmanifest.plist">Install KersCord (iOS)</a>
+    <a class="cta2" id="ipaBtn" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fkere0ne.github.io%2FKersCord%2Fmanifest.plist" style="display:none">Install KersCord (iOS)</a>
+    <p id="ipaWait" style="margin-top:12px;color:var(--dim);font-size:14px">Direct install is not live yet: there is no signed IPA at the manifest URL, so there is nothing to install.</p>
+    <script>
+    fetch("KersCord.ipa", {method:"HEAD"}).then(function(r){ if(r.ok){ document.getElementById("ipaBtn").style.display="inline-block"; var w=document.getElementById("ipaWait"); if(w) w.style.display="none"; } }).catch(function(){});
+    </script>
     <p style="margin-top:8px">After install, trust the profile in Settings &rarr; General &rarr; VPN &amp; Device Management.</p>
   </div>
   <div class="opt"><h3>Sideload with a free Apple ID <span class="tag2 free">free, 7-day signing</span></h3>
