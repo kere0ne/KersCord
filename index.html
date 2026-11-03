@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KersCord - Modded Discord for Android</title>
+<meta name="description" content="KersCord: a modded Discord APK with token login, token settings, account switching and auto-update.">
+<style>
+  :root{--bg:#1a1b1e;--panel:#232428;--panel2:#2b2d31;--txt:#dbdee1;--dim:#949ba4;--blurple:#5865f2;--green:#248046;--line:#3a3c41}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:24px}
+  header{padding:48px 0 32px;text-align:center}
+  h1{font-size:44px;color:#fff;letter-spacing:-1px}
+  h1 span{color:var(--blurple)}
+  .tag{color:var(--dim);font-size:17px;margin-top:6px}
+  .badge{display:inline-block;background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:999px;padding:4px 14px;font-size:13px;margin-top:16px;margin-right:6px}
+  .badge b{color:var(--blurple)}
+  .cta{display:inline-block;background:var(--blurple);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:14px 34px;border-radius:10px;margin-top:22px}
+  .cta:hover{background:#4752c4}
+  .size{color:var(--dim);font-size:13px;margin-top:8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:28px 0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card h3{color:#fff;font-size:16px;margin-bottom:6px}
+  .card p{color:var(--dim);font-size:14px}
+  h2{color:#fff;font-size:22px;margin:36px 0 12px}
+  ol{margin:10px 0 10px 22px}
+  ol li{margin:7px 0;color:var(--txt);font-size:15px}
+  .warn{background:#3c2b16;border:1px solid #a06a1f;border-radius:12px;padding:16px 18px;margin:14px 0;color:#f0c987;font-size:14px}
+  .opt{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0}
+  .opt h3{color:#fff;font-size:15px;margin-bottom:4px}
+  .opt p{color:var(--dim);font-size:14px}
+  .opt .tag2{display:inline-block;font-size:12px;border-radius:999px;padding:2px 10px;margin-left:6px;background:var(--panel2);color:var(--dim);border:1px solid var(--line)}
+  .free{color:#7ee0a0}.pay{color:#f0c987}
+  footer{margin:44px 0 24px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:13px;text-align:center}
+  a{color:var(--blurple)}
+  code{background:var(--panel2);border-radius:5px;padding:2px 6px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Kers<span>Cord</span></h1>
+    <div class="tag">Modded Discord for Android. Real Discord underneath.</div>
+    <span class="badge"><b>v1.0.3</b> &middot; Discord 126.21 base</span>
+    <span class="badge">com.discord</span><br>
+    <a class="cta" href="https://github.com/kere0ne/KersCord/releases/latest/download/KersCord.apk">Download APK</a>
+    <div class="size">KersCord.apk &middot; about 115 MB &middot; signed, auto-updates itself</div>
+  </header>
+
+  <div class="grid">
+    <div class="card"><h3>Token login</h3><p>Log in with a token: paste it in the email box or use the dedicated "Log in with token" button.</p></div>
+    <div class="card"><h3>Token Settings</h3><p>In user settings: get your current token, save accounts, and switch between them with one tap. Switching keeps the old account saved so you can go back.</p></div>
+    <div class="card"><h3>Email login</h3><p>Normal Discord login is untouched and works as always.</p></div>
+    <div class="card"><h3>Auto-update</h3><p>Checks GitHub releases on startup and points you to the newest APK.</p></div>
+  </div>
+
+  <h2>Android install</h2>
+  <ol>
+    <li>Tap Download APK above.</li>
+    <li>If your phone asks, allow installs from your browser (Settings &rarr; Apps &rarr; Install unknown apps).</li>
+    <li>Open the APK and tap Install. KersCord uses the same app slot as Discord, so it installs right over it. If stock Discord is a newer build than KersCord, uninstall stock first, then install KersCord.</li>
+    <li>Open KersCord and log in however you like.</li>
+  </ol>
+
+  <h2>iOS</h2>
+  <div class="warn">Straight talk: Apple does not allow direct installs from a website. There is no tap-to-install link for iOS like the APK above. Anything you run on an iPhone has to be signed with a certificate.</div>
+  <div class="opt"><h3>Sideload with a free Apple ID <span class="tag2 free">free, 7-day signing</span></h3>
+    <p>Use <b>Sideloadly</b> (Windows/macOS) or <b>AltStore</b> on a computer: plug your iPhone in, sign the modded IPA with your own Apple ID, and install. The signature expires after 7 days, so you re-sign weekly, and a free Apple ID caps you at 3 sideloaded apps. Set up first: install Sideloadly, get the IPA, drag it in, enter your Apple ID, wait for the phone to install, then trust the developer profile in Settings &rarr; General &rarr; VPN &amp; Device Management.</p></div>
+  <div class="opt"><h3>Paid Apple Developer account <span class="tag2 pay">$99/year, 1-year signing</span></h3>
+    <p>Same sideload flow, but the signature lasts a year instead of a week.</p></div>
+  <div class="opt"><h3>Jailbreak tweak <span class="tag2 free">needs a jailbroken device</span></h3>
+    <p>On a jailbroken iPhone, Discord mods ship as tweaks that run inside the real app. Not sideloading, and only worth it if you already jailbreak.</p></div>
+  <div class="warn">There is no KersCord IPA yet. Building one needs a decrypted Discord IPA plus your own signing identity, so the iOS section above is the route, not a download.</div>
+
+  <h2>Updates</h2>
+  <ol>
+    <li>KersCord checks GitHub releases when it starts and opens the newest APK download if there is a new version.</li>
+    <li>Install over the old build. No uninstall, no data loss.</li>
+  </ol>
+
+  <footer>
+    Not affiliated with, endorsed by, or connected to Discord. Use of modded clients can violate Discord's Terms of Service; use at your own risk.<br>
+    Built by <a href="https://github.com/kere0ne">kere0ne</a> &middot; <a href="https://github.com/kere0ne/KersCord/releases">All releases</a>
+  </footer>
+</div>
+</body>
+</html>
