@@ -18,6 +18,8 @@
   .badge b{color:var(--blurple)}
   .cta{display:inline-block;background:var(--blurple);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:14px 34px;border-radius:10px;margin-top:22px}
   .cta:hover{background:#4752c4}
+  .cta2{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:12px 30px;border-radius:10px;margin-top:12px}
+  .cta2:hover{background:#1f7040}
   .size{color:var(--dim);font-size:13px;margin-top:8px}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:28px 0}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
@@ -65,6 +67,12 @@
 
   <h2>iOS</h2>
   <div class="warn">Straight talk: Apple does not allow direct installs from a website. There is no tap-to-install link for iOS like the APK above. Anything you run on an iPhone has to be signed with a certificate.</div>
+  <div class="opt" style="border-color:var(--green)">
+    <h3>Direct install <span class="tag2 free">delta-style, no computer needed</span></h3>
+    <p>Tap-to-install straight from this page using Apple's OTA install. It goes live the moment a signed IPA sits at the URL inside <code>manifest.plist</code>. Until then the button errors out, because there is no signed IPA yet: making one needs a decrypted Discord IPA and an Apple signing certificate ($99/yr, and Apple revokes certs regularly, so delta.bz dies for days at a time too).</p>
+    <a class="cta2" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fkere0ne.github.io%2FKersCord%2Fmanifest.plist">Install KersCord (iOS)</a>
+    <p style="margin-top:8px">After install, trust the profile in Settings &rarr; General &rarr; VPN &amp; Device Management.</p>
+  </div>
   <div class="opt"><h3>Sideload with a free Apple ID <span class="tag2 free">free, 7-day signing</span></h3>
     <p>Use <b>Sideloadly</b> (Windows/macOS) or <b>AltStore</b> on a computer: plug your iPhone in, sign the modded IPA with your own Apple ID, and install. The signature expires after 7 days, so you re-sign weekly, and a free Apple ID caps you at 3 sideloaded apps. Set up first: install Sideloadly, get the IPA, drag it in, enter your Apple ID, wait for the phone to install, then trust the developer profile in Settings &rarr; General &rarr; VPN &amp; Device Management.</p></div>
   <div class="opt"><h3>Paid Apple Developer account <span class="tag2 pay">$99/year, 1-year signing</span></h3>
